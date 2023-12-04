@@ -1,0 +1,41 @@
+﻿@page "/persons"
+
+<PageTitle>Lista kontaktowa</PageTitle>
+
+<h1>Lista kontaktowa</h1>
+
+
+@if (_persons != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th width="25%">Id</th>
+                <th width="25%">Imię</th>
+                <th width="25%">Nazwisko</th>
+                <th width="25%">Numer telefonu</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in _persons)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.FirstName
+                    </td>
+                    <td>
+                        @item.LastName
+                    </td>
+                    <td>
+                        @item.PhoneNumber
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}

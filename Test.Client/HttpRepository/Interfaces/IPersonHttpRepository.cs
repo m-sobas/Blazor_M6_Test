@@ -4,6 +4,6 @@ namespace Test.Client.HttpRepository.Interfaces
 {
     public interface IPersonHttpRepository
     {
-        Task<IList<PersonDto>> GetAllPersonsAsync();
+        Task<IList<PersonDto>> GetAllPersons();
     }
 }

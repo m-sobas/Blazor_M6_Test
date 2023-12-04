@@ -13,7 +13,7 @@ namespace Test.Client.HttpRepository
             _client = client;
         }
 
-        public async Task<IList<PersonDto>> GetAllPersonsAsync() 
+        public async Task<IList<PersonDto>> GetAllPersons() 
             => await _client.GetFromJsonAsync<IList<PersonDto>>("person");
     }
 }
